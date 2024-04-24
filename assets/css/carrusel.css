@@ -1,0 +1,34 @@
+#client-logos .carousel {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: white; /* Fondo blanco para el carrusel */
+    padding: 20px 0; /* Espaciado vertical para mejor visibilidad */
+}
+
+#client-logos .logos {
+    display: flex;
+    animation: scrollLogos 30s linear infinite;
+}
+
+#client-logos .logos img {
+    width: 150px; /* Ancho fijo para todos los logos */
+    height: 100px; /* Alto fijo para todos los logos */
+    object-fit: contain; /* Escalar los logos para que se ajusten sin distorsionarse */
+    margin-right: 20px; /* Espaciado entre logos */
+    opacity: 0.7; /* Ligera transparencia para enfocar cuando se hace hover */
+    transition: opacity 0.3s ease-in-out;
+}
+
+#client-logos .logos img:hover {
+    opacity: 1; /* Mayor visibilidad al pasar el cursor */
+}
+
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
